@@ -1,0 +1,45 @@
+algver -default options-file
+
+*** Main options file ***
+
+For the default interface, the options file has this, line-by-line:
+
+1)  Experiment name (used to open associated files) - e.g., "exp01" means
+    QUESO input file name is "exp01.queso", the prior input file for the
+    informative case is "exp01.prior", etc. 
+2)  sample size
+3)  number of beta parameters (d)
+4)  prior case ("informative" or "noninformative")
+5)  amplitude of Beta-generating function
+6)  bias of Beta-generating function
+7)  lambda
+8)  phi
+9)  correlation type ("none", "equal", or "ar1")
+10) known parameters ("lambdaphi", "phi", "none")
+11) seed
+12) lambda for the regression matrix
+13) phi for the regression matrix
+14) correlation type for the regression matrix ("none", "equal", or "ar1") 
+15) beta maximum value
+16) beta minimum value
+17) lambda maximum value
+18) lambda minimum value
+19) phi maximum value
+20) phi minimum value
+
+
+*** Prior file ***
+
+When an informative prior is specified, a file named "Experiment name".prior
+(e.g. exp01.prior) holds the prior information. For the default interface,
+this is given like so:
+
+mu amplitude
+mu bias
+q
+r_1
+...
+r_{N_\beta}
+
+where there are N_\beta values for r (d+1 by the notation in the code)
+
